@@ -93,7 +93,7 @@ def downloadPapers(remarkable_files, zotero_papers):
 
     for downloading_paper in downloading_papers:
         paper_title = downloading_paper["title"]
-        COMMAND = "{} geta /{}/\"{}\"".format(RMAPI_CALL, FOLDER_NAME, paper_title)
+        COMMAND = "{} geta -a /{}/\"{}\"".format(RMAPI_CALL, FOLDER_NAME, paper_title)
         try:
             print(COMMAND)
             subprocess.check_output(COMMAND, shell=True)
